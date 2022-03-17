@@ -1,9 +1,14 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Main from './pages/main.tsx';
 
 function App() {
   return (
-    <div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Main />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
