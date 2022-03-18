@@ -11,8 +11,8 @@ const LightController = (props) => (
             shadow-camera-far={50}
             shadow-camera-left={-100}
             shadow-camera-right={100}
-            shadow-camera-top={10}
-            shadow-camera-bottom={-10}
+            shadow-camera-top={100}
+            shadow-camera-bottom={-100}
         />
         <ambientLight intensity={0.4}/>
         <pointLight position={[-10, 0, -20]} intensity={0.5} />
