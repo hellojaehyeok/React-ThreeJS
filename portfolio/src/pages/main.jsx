@@ -1,26 +1,14 @@
 
 import React, { Suspense, useEffect, useMemo } from 'react'
 import styled from 'styled-components';
-import { Canvas, useLoader } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import { OrbitControls, softShadows, Stats, useProgress } from '@react-three/drei';
-import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import PlaneModel from '../three/planeModel';
 import ReactModel from '../three/reactModel';
 import LightController from '../three/lightController';
-import userObj from '../obj/user.obj';
+import UserModel from '../three/userModel';
 
 softShadows();
-
-const Scene = () => {
-
-    const obj = useLoader(OBJLoader, userObj);
-    useEffect(()=>{
-       console.log(obj);
-    }, [obj])
-
-    return <primitive object={obj} />;
-};
 
 const Main = ({}) => {
     // const { progress } = useProgress();
@@ -41,8 +29,8 @@ const Main = ({}) => {
 
                 <PlaneModel />
                 <ReactModel />
-                
-                <Scene />
+
+                <UserModel />
             </Canvas>
         </Container>
     )

@@ -1,6 +1,6 @@
 # This file uses centimeters as units for non-parametric coordinates.
 
-mtllib head.mtl
+mtllib user.mtl
 g default
 v -0.066372 2.511949 0.591294
 v -0.079634 2.485921 0.591294
