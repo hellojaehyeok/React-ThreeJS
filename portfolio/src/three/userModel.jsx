@@ -1,17 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
-import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import userObj from '../obj/user.obj';
-import userMtl from '../obj/user.mtl';
 import { useLoader } from '@react-three/fiber';
+import { useSphere } from '@react-three/cannon';
 
 const UserModel = (props) => {
-    
-    const obj = useLoader(OBJLoader, userObj);
+    const [ref] = useSphere(() => ({
+        mass: 10,
+        position:[0, 10, 0],
+        args:[5, 50, 50],
+    }))
 
     return (
-        <mesh castShadow receiveShadow position={[0, -20, 15]}>
-            <primitive object={obj} scale={4.0} castShadow receiveShadow/>
+        <mesh castShadow ref={ref}>
+            <sphereBufferGeometry attach='geometry' args={[5, 50, 50]}/>
+            <meshStandardMaterial />
         </mesh>
     );
 };
