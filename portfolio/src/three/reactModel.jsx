@@ -17,9 +17,16 @@ const ReactModel = (props) => {
                 args={[10, 1, 300, 20, 6, 10]}
             />
             <meshPhysicalMaterial
+                transparent
+                opacity={0.3}
+                roughness={0}
+                metalness={1}
+                reflectivity={1}
+                clearcoat={1}
                 attach='material'
                 color={"#61DBFB"}
             />
+            <pointLight intensity={1} color={"#fff"}/>  
         </mesh>
     )
 };

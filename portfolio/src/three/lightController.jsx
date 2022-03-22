@@ -5,7 +5,7 @@ const LightController = (props) => (
         <directionalLight 
             castShadow
             position={[0, 10, 0]}
-            intensity={4}
+            intensity={0.2}
             shadow-mapSize-width={1024}
             shadow-mapSize-height={1024}
             shadow-camera-far={50}
@@ -16,7 +16,7 @@ const LightController = (props) => (
         />
         <ambientLight intensity={0.4}/>
         <pointLight position={[-10, 0, -20]} intensity={0.5} />
-        <pointLight position={[0, -10, 0]} intensity={1.5} />        
+        <pointLight position={[0, -10, 0]} intensity={1.5}/>     
     </>
 );
 

@@ -12,7 +12,19 @@ const BoxModel = ({position, scale}) => {
     return(
         <mesh castShadow ref={ref}>
             <boxBufferGeometry args={boxScale} />
-            <meshStandardMaterial />
+            <meshPhysicalMaterial
+                transparent
+                opacity={1}
+                roughness={0}
+                metalness={1}
+                reflectivity={1}
+                clearcoat={1}
+                wireframe
+                attach='material'
+                color={"#b8f0ff"}
+                emissive={"#fff"}
+            />
+            {/* <meshStandardMaterial color={"#8f8f8f"}/> */}
         </mesh>
     )
 }

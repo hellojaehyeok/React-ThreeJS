@@ -68,7 +68,8 @@ const UserModel = (props) => {
     return (
         <mesh castShadow receiveShadow ref={ref}>
             <sphereBufferGeometry attach='geometry' args={[3, 50, 50]}/>
-            <meshStandardMaterial color={"#599cff"}/>
+            <meshStandardMaterial color={"#ff7a7a"}/>
+            <pointLight intensity={20} color={"#ff3d3d"}/>  
         </mesh>
     );
 };

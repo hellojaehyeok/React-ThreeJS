@@ -26,7 +26,9 @@ const Main = ({}) => {
                 colorManagement
                 camera={{position:[0, 10, 50], fov:80 }}
             >   
-                <color attach='background' args={["#fff"]}/>
+                <color attach='background' args={["#0e0e0f"]}/>
+                {/* <fog attach="fog" args={["#f00", 10, 200]} /> */}
+                
                 <LightController />
                 <OrbitControls />
                 <Stats />

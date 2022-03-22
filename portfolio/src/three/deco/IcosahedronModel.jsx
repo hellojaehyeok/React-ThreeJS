@@ -11,7 +11,18 @@ const IcosahedronModel = ({position}) => {
     return(
         <mesh castShadow ref={ref}>
             <icosahedronBufferGeometry ref={ref} args={[7, 0]} />
-            <meshStandardMaterial />
+            <meshPhysicalMaterial
+                wireframe
+                transparent
+                opacity={0.3}
+                roughness={0}
+                metalness={1}
+                reflectivity={1}
+                clearcoat={1}
+                attach='material'
+                emissive={"#fff"}
+            />
+            {/* <meshStandardMaterial color={"#8f8f8f"} /> */}
         </mesh>
     )
 }
