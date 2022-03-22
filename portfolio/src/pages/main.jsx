@@ -1,5 +1,5 @@
 
-import React, { Suspense, useEffect, useMemo } from 'react'
+import React from 'react'
 import styled from 'styled-components';
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, softShadows, Stats, useProgress } from '@react-three/drei';
@@ -7,6 +7,7 @@ import PlaneModel from '../three/planeModel';
 import ReactModel from '../three/reactModel';
 import LightController from '../three/lightController';
 import UserModel from '../three/userModel';
+import { Physics } from '@react-three/cannon';
 
 softShadows();
 
@@ -27,10 +28,12 @@ const Main = ({}) => {
                 <OrbitControls />
                 <Stats />
 
-                <PlaneModel />
-                <ReactModel />
+                <Physics>
+                    <PlaneModel />
+                    <ReactModel />
 
-                <UserModel />
+                    <UserModel />
+                </Physics>
             </Canvas>
         </Container>
     )
